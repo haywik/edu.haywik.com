@@ -1,0 +1,4 @@
+
+Anything within this dir can be used to display automaticly on the domain edu.haywik.com/code/c6/FILE/DIR
+
+  
