@@ -1,0 +1,2 @@
+adminpass = "hayhay"
+

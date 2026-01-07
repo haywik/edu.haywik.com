@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<head>
+<title>
+hi
+</title>
+
+</head>
+<body>
+
+  <h2>players in imaginary football</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>players</th>
+        <th>age</th>
+        <th>goals</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>jim planter</td>
+        <td>33</td>
+        <td>12</td>
+      </tr>
+      <tr>
+        <td>john willams</td>
+        <td>45</td>
+        <td>22</td>
+      </tr>
+      <tr>
+        <td>jammy jimmy </td>
+        <td>23</td>
+        <td>3</td>
+      </tr>
+	  <tr>
+	    <td>carrot guy</td>
+		<td>55</td>
+		<td>23</td>
+	 </tr>
+    </tbody>
+  </table>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,51 @@
+<html>
+
+
+
+<body>
+<form>
+
+<div>
+<label for="fname">First Name</label>
+<input type="text" id="fname" name="fname" placeholder="jim">
+</div>
+
+<br>
+
+<div>
+<label for="lname">Last name</label>
+<input type="text" id="lname" name="lname" placeholder="jack">
+</div>
+
+
+<br>
+
+<div>
+
+<input type="reset">
+
+</div>
+
+
+
+<br>
+
+
+<div>
+
+<input type="submit">
+</div>
+
+
+
+
+
+</form>
+
+
+</body>
+
+
+
+
+</html>

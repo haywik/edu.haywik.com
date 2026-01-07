@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="refresh" content="10">
+    <title>General Interface Control Point</title>
+
+    <style>
+        body{
+            margin: 0px;
+            background-color: black;
+        }
+
+        .GICP_container{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+
+        }
+       
+        
+        h1 , h2{
+            margin: 0px;
+       
+        }
+
+        .GICP_text_title {
+            text-align: center;
+            border-style: dashed;
+            border-width: 5px;
+            padding: 5px;
+            margin: 10px;
+            font-size:2.25vw;
+            border-color: rgba(0, 255, 255, 0.822);
+            flex-grow: 2; /* Center item should grow larger */
+        }
+
+        .GICP_text_left, .GICP_text_right {
+            text-align: center;
+            border-style: dotted;
+            border-width: 5px;
+            padding: 5px;
+            margin: 10px;
+            font-size:1.75vw;
+            border-color: rgb(16, 102, 102);
+            flex-grow: 1; /* Left and Right grow equally */
+        }
+
+
+        .buttons_container{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            margin: 10px;
+            background-color: rgb(9, 0, 41)
+        }
+
+        .buttons_config{
+            flex-grow: 1;
+            text-align: center; 
+            background-color: rgb(255, 255, 255);
+            padding: 4px;
+            margin: 4px;
+            font-size: 1.5vw;
+            max-width: 15vw;
+            min-width: 15vw;
+            transition: background-color 0.1s;
+        }
+        
+        .buttons_config:active{
+            background-color: red;
+        }
+
+        @media (max-width:600px){
+            
+        }
+       
+    </style>
+
+</head>
+
+
+<body>
+    <div class="GICP_container">
+        <h2 class="GICP_text_left" style="color: wheat;">System Good</h2>
+        <h1 class="GICP_text_title" style="color: wheat;">General Interface Control Point</h1>
+        <h2 class="GICP_text_right" style="color: wheat;"> Up:{{up_time}}</h2>    
+    </div>
+    <div class="buttons_container">
+        <button style="background-color: chocolate; color:black;", class="buttons_config", onclick="fetch('/open-home',{method:'POST'})">Personal--00</button>
+		<button style="background-color: chocolate; color:black;", class="buttons_config", onclick="fetch('/open-ict',{method:'POST'})">ICT</button>
+		<button style="background-color: chocolate; color:black;", class="buttons_config", onclick="fetch('/open-home',{method:'POST'})">Revision</button>
+        <button style="background-color: chocolate; color:black;", class="buttons_config", onclick="fetch('/open-revision',{method:'POST'})">Homework</button> 
+    </div>
+    <div class="buttons_container">
+        <button style="background-color: rgb(212, 212, 3);color:black", class="buttons_config", onclick="fetch('/close-stated', {method:'POST'})">Close stated</button>
+        <button style="background-color: rgb(212, 212, 3);color:black", class="buttons_config", onclick="fetch('/run-eco', {method:'POST'})">Run eco</button>
+        <button style="background-color: rgb(212, 212, 3);color:black", class="buttons_config", onclick="fetch('/run-mc', {method:'POST'})">Run mc</button>
+        <button style="background-color: rgb(212, 212, 3);color:black", class="buttons_config", onclick="fetch('/run-roblox', {method:'POST'})">Run roblox</button>
+        <button style="background-color: rgb(212, 212, 3);color:black", class="buttons_config", onclick="fetch('/run-forts', {method:'POST'})">Run forts</button>
+        <button style="background-color: rgb(212, 212, 3);color:black", class="buttons_config", onclick="fetch('/run-steam', {method:'POST'})">Run steam</button>
+    </div>
+    <div class="buttons_container">
+        <button style="background-color:rgba(255, 16, 175, 0.744);color:black", class="buttons_config", onclick="fetch('/close-all', {method:'POST'})">Close All</button>
+        <button style="background-color:rgba(255, 16, 175, 0.744);color:black", class="buttons_config", onclick="fetch('/machine-shutdown', {method:'POST'})">PC Lock</button>
+        <button style="background-color:rgba(255, 16, 175, 0.744);color:black", class="buttons_config", onclick="fetch('/machine-shutdown', {method:'POST'})">PC Shutdown</button>
+        <button style="background-color:rgba(255, 16, 175, 0.744);color:black", class="buttons_config", onclick="fetch('/server-shutdown', {method:'POST'})">Server Disconnect</button>
+        <button style="background-color:rgba(255, 16, 175, 0.744);color:black", class="buttons_config", onclick="fetch('/reboot-network', {method:'POST'})">Network Reboot</button>
+    </div>
+    <div class="buttons_container">
+        <button style="color:black;background-color: green;", class="buttons_config" onclick="location.reload()">Force Update</button>
+        <button style="color:black;background-color: green;", class="buttons_config" onclick="window.close()">Close Page</button>
+        <button style="color:black;background-color: green;", class="buttons_config" onclick="window.open(window.location.href,'_blank')">Duplicate</button>
+
+    </div>
+</body>
+
+</html>

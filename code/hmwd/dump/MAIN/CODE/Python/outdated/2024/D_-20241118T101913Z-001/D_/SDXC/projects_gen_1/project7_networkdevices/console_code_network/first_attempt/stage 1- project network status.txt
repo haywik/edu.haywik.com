@@ -1,0 +1,19 @@
+stage 1- project network status
+
+1. basic console output of good/bad
+
+2. UTk gui to display the output 
+
+stage 2
+
+1. detailed console output
+2. \/ same for gui
+
+stage 3
+
+1. bat optimise
+2. python optimise
+
+stage 4 
+
+1. notifications

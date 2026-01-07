@@ -1,0 +1,22 @@
+TITLE : New World
+CREATOR : haywik
+DESCRIPTION : game wasd f for player 1 
+arrow keys and i for player 2
+Date : 12/07/2022 14:04
+========
+
+Cannon 2
+    Page  1
+        1    WHEN scored red -- DO create ball once 
+        2    WHEN scored white above 50 points -- DO scale quickly quickly 
+        3    WHEN scored white above 50 points -- DO switch page 2 
+        4    WHEN timer seconds 0.125 -- DO scale (instant) once 
+        5    WHEN timer seconds 60 -- DO win 
+        6    WHEN always -- DO 
+    Page  2
+        1    WHEN scored white above -- DO scale quickly quickly 
+        2    WHEN timer seconds 3 -- DO create ball 
+        3    WHEN timer seconds 4 -- DO create ball 
+        4    WHEN timer seconds 4 -- DO create ball 
+        5    WHEN timer seconds 5 -- DO create ball 
+        6    WHEN timer seconds 10 -- DO create ball 

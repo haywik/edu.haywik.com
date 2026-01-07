@@ -1,0 +1,70 @@
+
+<html>
+<head>
+
+<script language="javascript">
+
+function validateForm(){
+          var user = document.forms["login"]["user"].value;
+          if (user == null || user == "") {
+                    alert("User name must be entered.");
+                    return false;
+          }
+}
+
+</script>
+
+<style type="text/css">
+        body
+        {
+	       margin: 0px;
+	       background: #8EAFD8;
+        }
+        td 
+        {
+            font-family: tahoma,arial,helvetica,sans-serif;
+            font-size:   10px;
+            font-weight: bold;
+        }
+        input 
+        {
+            font-size: 10px;
+        }
+     </style>
+<title>User Login</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"> </head>
+
+<body text="#000000">               
+<br> 
+<br> 
+<table style="border-right: 2px solid rgb(119, 119, 119); border-bottom: 2px solid rgb(119, 119, 119);" bgcolor="#8eafd8" align="center" width="250" cellspacing="0" > 
+  <tr padding="0" margin="0" bgcolor="#ffffff"> 
+      <td padding="0" margin="0" background="../images/log-head.gif"> &nbsp; User Login </td>
+  </tr> 
+  <tr bgcolor="#ffffff"> 
+      <td>
+         <form name="login" action="logincheck" onsubmit="return validateForm()" method="POST"> 
+	       <table width="31%" bgcolor="#ffffff" bordercolor="#ffffff">
+    		   <tr>
+    		       <td height="36" >Username:</td>
+                   <td height="36" ><input size="25" name="user" ></td>
+              </tr>
+              <tr> 
+                   <td height="31" >Password:</td>
+                   <td height="31"><input type="password" name="pass" size="25" ></td>
+              </tr>
+           </table>
+		   <table width="100%">
+			   <tr>
+		          <td align="middle">
+                     <p> <input type="submit" name="Submit" value="Login" > </p>
+                  </td>
+               </tr>
+           </table>
+         </form>
+      </td>
+   </tr>
+</table>
+
+</body>
+</html>

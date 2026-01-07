@@ -1,0 +1,17 @@
+TITLE : New World
+CREATOR : haywik
+DESCRIPTION : game wasd f for player 1 
+arrow keys and i for player 2
+Date : 28/06/2022 14:00
+========
+
+Cannon 1
+    Page  1
+        1    WHEN timer seconds 3 -- DO create ball 
+        2    WHEN timer seconds 10 -- DO create ball 
+        3    WHEN timer seconds 20 -- DO create ball 
+        4    WHEN timer seconds 30 -- DO create ball 
+        5    WHEN timer seconds 10 -- DO score white 5 points 
+        6    WHEN scored white >= 20 points -- DO create ball once 
+        7    WHEN scored white above 5 points -- DO 
+        8    WHEN always -- DO 

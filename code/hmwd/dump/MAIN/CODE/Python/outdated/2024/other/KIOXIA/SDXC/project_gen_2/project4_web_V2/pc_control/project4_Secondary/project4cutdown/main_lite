@@ -1,0 +1,107 @@
+
+
+#import pyautogui as po
+import time
+import platform
+import os
+import socket
+import subprocess
+protocle= [
+    'help="help"'
+    'Hub Reboot = "hub_reboot"'
+    'Homework = "homework"'
+    'Computer Science setup = "ict"'  
+    'System Info = "system_info'
+    'Command Prompt = "cmd_prompt"'
+    'task manager = "task_manager"'
+    'install = "install"'
+]
+
+def get_system_info():
+    uname = platform.uname()
+
+    print("System:", uname.system)
+    print("Node:", uname.node)
+    print("Release:", uname.release)
+    print("Version:", uname.version)
+    print("Machine:", uname.machine)
+    print("Processor:", uname.processor)
+    print("Hostname:", socket.gethostname())
+    print("IP address:", socket.gethostbyname(socket.gethostname()))
+    print("\nEnvironment Variables:")
+
+    md = input("more details? Y/N").lower()
+    if md == "y":
+
+        for key, value in os.environ.items():
+            print(f"{key}: {value}")
+        print("\nCPU Information:")
+        if uname.system == "Windows":
+            out = subprocess.run("wmic cpu get caption, MaxClockSpeed", capture_output=True, text=True, shell=True)
+            out3 = out.stdout
+            out2 = out3.replace("CompletedProcess(args='wmic cpu get caption, MaxClockSpeed', returncode=0)", "")
+            print(out2)
+        else:
+            #cpu_info = subprocess.check_output("lscpu", shell=True).decode()
+            #print(cpu_info)
+
+        print("\nMemory Information:")
+        if uname.system == "Windows":
+            memory_info = subprocess.check_output("systeminfo | findstr /C:\"Total Physical Memory\"", shell=True).decode()
+            print(memory_info)
+        else:
+            memory_info = subprocess.check_output("free -h", shell=True).decode()
+            print(memory_info)
+
+get_system_info()
+def command_prompt():
+    print("starting command_prompt")
+    print("Info: type exit to exit \n :  Type shell=True to enable subprocess wit shell use \nshell=False to turn off, \n Type config to config")
+    config = input("type configs:").lower()
+    while True:
+        cin = input(":>")
+        if cin == "config":
+            config = input("type configs:").lower()
+            cin = input(":>")
+        if cin=="exit":
+            exit()
+        try:
+            if config=="shell=false":
+                args = cin.split()
+                x = subprocess.run(args,capture_output=True,text=True)
+                print(x.stdout)
+                print(x.stderr)
+            elif config=="shell=true":
+                x = subprocess.run(cin,shell=True)
+                print(x)
+        except Exception as e:
+            print("\nerror :")
+            print(e)
+            print("\n")
+
+
+
+
+while True:
+    cmd = input("\nEnter Command:").lower()
+
+    if cmd == "help":
+        print(protocle)
+    elif cmd == "hub_reboot":
+        hub_reboot()
+    elif cmd == "homework":
+        homework()
+    elif cmd=="ict":
+        school_ict()
+    elif cmd=="system_info":
+        get_system_info()
+    elif cmd=="cmd_prompt":
+        command_prompt()
+    elif cmd=="task_manager":
+        task_manager()
+    elif cmd == "install":
+        install()
+    else:
+        quick_cmd(cmd)
+
+

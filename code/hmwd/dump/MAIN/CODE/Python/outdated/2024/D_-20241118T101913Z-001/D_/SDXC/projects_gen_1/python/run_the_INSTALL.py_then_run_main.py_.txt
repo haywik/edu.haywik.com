@@ -1,0 +1,1 @@
+run install.py to get the needed libaries then run main.py or your computer will take off

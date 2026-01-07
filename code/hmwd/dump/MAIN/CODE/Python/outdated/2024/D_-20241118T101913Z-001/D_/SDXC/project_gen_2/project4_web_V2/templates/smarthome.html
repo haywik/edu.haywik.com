@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="refresh">
+    <title>General Interface Control Point</title>
+
+    <style>
+        body{
+            margin: 0px;
+            background-color: black;
+        }
+
+        .GICP_container{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+
+        }
+       
+        
+        h1 , h2{
+            margin: 0px;
+       
+        }
+
+        .GICP_text_title {
+            text-align: center;
+            border-style: dashed;
+            border-width: 5px;
+            padding: 5px;
+            margin: 10px;
+            font-size:2.25vw;
+            border-color: rgba(0, 255, 255, 0.822);
+            flex-grow: 2; /* Center item should grow larger */
+        }
+
+        .GICP_text_left, .GICP_text_right {
+            text-align: center;
+            border-style: dotted;
+            border-width: 5px;
+            padding: 5px;
+            margin: 10px;
+            font-size:1.75vw;
+            border-color: rgb(16, 102, 102);
+            flex-grow: 1; /* Left and Right grow equally */
+        }
+
+
+        .buttons_container{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            margin: 10px;
+            background-color: rgb(9, 0, 41)
+        }
+
+        .buttons_config{
+            flex-grow: 1;
+            text-align: center; 
+            background-color: rgb(255, 255, 255);
+            padding: 4px;
+            margin: 4px;
+            font-size: 1.5vw;
+            max-width: 15vw;
+            min-width: 15vw;
+            
+        }
+        
+        .buttons_config:active{
+            background-color: red;
+        }
+        .button_config_big{
+            flex-grow: 1;
+            text-align: center; 
+            background-color: rgba(4, 0, 255, 0.302);
+            
+            margin: 1.2vw;
+            font-size: 3vw;
+            max-width: 30vw;
+            min-width: 30vw;
+
+            border-color: rgb(1, 1, 196);
+            border-radius: 1vw;
+        }
+        @media (max-width:600px){
+            
+        }
+       
+    </style>
+
+</head>
+
+<body>
+    
+    <div class="GICP_container">
+        <h2 class="GICP_text_left" style="color: wheat;">Smart Home</h2>
+        <h1 class="GICP_text_title" style="color: wheat;">General Interface Control Point</h1>
+        <h2 id="uptime", class="GICP_text_right" style="color: wheat;"> Up time loading...</h2>    
+    </div>
+    <div class="buttons_container">
+        <button style="color:black;background-color: rgb(0, 194, 0);", class="buttons_config" onclick="location.reload()">Force Update</button>
+        <button style="color:black;background-color: green;", class="buttons_config" onclick="document.documentElement.requestFullscreen()">Fullscreen</button>
+        <button style="color:black;background-color: rgb(0, 194, 0);", class="buttons_config" onclick="document.exitFullscreen()"> Exit Fullscreen</button>
+        <button style="color:black;background-color: green;", class="buttons_config" onclick="window.close()">Close Page</button>
+        <button style="color:black;background-color: rgb(0, 194, 0);" class="buttons_config" onclick="window.open(window.location.href,'_blank')">Duplicate</button>
+        <button style="color:black;background-color: green;" class="buttons_config">nothing</button>
+
+    </div> 
+    <div class="buttons_container">
+        <button style="color: rgb(0, 140, 255);" class="button_config_big" onclick="window.location.href='/'">Main Menu</button>
+        <button style="color: rgb(0, 140, 255);" class="button_config_big">PC Extra</button>   
+        <button style="color: rgb(0, 140, 255);" class="button_config_big">Server Info</button>
+
+    </div>
+    <script>
+        function updateUptime(){
+            fetch('/get-uptime')
+                .then(response => response.json())
+                .then(data => {
+                    
+                        document.getElementById('uptime').textContent = 'Up: ' + data.up_time;
+                });
+        }
+       setInterval(updateUptime, 1000)
+       updateUptime()
+       
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="refresh">
+    <title>General Interface Control Point</title>
+
+    <style>
+        body{
+            margin: 0px;
+            background-color: black;
+        }
+
+        .GICP_container{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+
+        }
+       
+        
+        h1 , h2{
+            margin: 0px;
+       
+        }
+
+        .GICP_text_title {
+            text-align: center;
+            border-style: dashed;
+            border-width: 0.4vw;
+            padding: 0.5vw;
+            margin: 0.4vw;
+            font-size:1.7vw;
+            border-color: rgba(0, 255, 255, 0.822);
+            flex-grow: 2; /* Center item should grow larger */
+        }
+
+        .GICP_text_left, .GICP_text_right {
+            text-align: center;
+            border-style: dotted;
+            border-width: 0.4vw;
+            padding: 0.7vw;
+            margin: 0.7vw;
+            font-size:1.4vw;
+            border-color: rgb(16, 102, 102);
+            flex-grow: 1; /* Left and Right grow equally */
+        }
+
+
+        .buttons_container{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1vw;
+            margin: 1vw;
+            background-color: rgb(9, 0, 41)
+        }
+        .button_container2{
+            display:flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1vw;
+            margin:1vw;
+            background-color: black;
+        }
+        .buttons_config{
+            flex-grow: 1;
+            text-align: center; 
+            background-color: rgb(255, 255, 255);
+            padding: 0.4vw;
+            margin: 0.4vw;
+            font-size: 1.8vw;
+            max-width: 15vw;
+            min-width: 15vw;
+            
+        }
+
+        .button_config_big{
+            flex-grow: 1;
+            text-align: center; 
+            background-color: rgba(4, 0, 255, 0.302);
+            
+            margin: 1.2vw;
+            font-size: 3vw;
+            max-width: 30vw;
+            min-width: 30vw;
+
+            border-color: rgb(1, 1, 196);
+            border-radius: 1vw;
+        }
+        
+        .buttons_config:active{
+            background-color: red;
+        }
+
+        @media (max-width:600px){
+            
+        }
+       
+    </style>
+
+</head>
+
+<body>
+    
+    <div class="GICP_container">
+        <h2 class="GICP_text_left" style="color: wheat;">Quick Controls</h2>
+        <h1 class="GICP_text_title" style="color: wheat;">General Interface Control Point</h1>
+        <h2 id="uptime", class="GICP_text_right" style="color: wheat;"> Up time loading...</h2>    
+    </div>
+    <div class="buttons_container">
+        <button style="background-color: rgb(52, 177, 255);color:black", class="buttons_config", onclick="fetch('/run-whatsapp', {method:'POST'})">WhatsApp</button>
+        <button style="background-color: rgb(1, 120, 194);color:black", class="buttons_config", onclick="fetch('/run-discord', {method:'POST'})">Discord</button>
+        <button style="background-color: rgb(52, 177, 255);color:black", class="buttons_config", onclick="fetch('/run-chrome', {method:'POST'})">Chrome</button>
+        <button style="background-color: rgb(1, 120, 194);color:black", class="buttons_config", onclick="fetch('/run-vscode', {method:'POST'})">VsCode</button>
+        <button style="background-color: rgb(52, 177, 255);color:black", class="buttons_config">nothing</button>
+        <button style="background-color: rgb(1, 120, 194);color:black", class="buttons_config">nothing</button>
+        
+    </div>
+    <div class="buttons_container">
+        <button style="background-color: rgb(190, 190, 0);color:black", class="buttons_config", onclick="fetch('/run-steam', {method:'POST'})">Steam</button>
+        <button style="background-color: rgb(254, 254, 32);color:black", class="buttons_config", onclick="fetch('/run-satisfactory', {method:'POST'})">Satisfactory</button>
+        <button style="background-color: rgb(190, 190, 0);color:black", class="buttons_config", onclick="fetch('/run-eco', {method:'POST'})">Eco</button>
+        <button style="background-color: rgb(254, 254, 32);color:black", class="buttons_config", onclick="fetch('/run-mc', {method:'POST'})">Minecraft</button>
+        <button style="background-color: rgb(190, 190, 0);color:black", class="buttons_config", onclick="fetch('/run-roblox', {method:'POST'})">Roblox</button>
+        <button style="background-color: rgb(254, 254, 32);color:black", class="buttons_config", onclick="fetch('/run-forts', {method:'POST'})">Forts</button>
+        
+    </div>
+    <div class="buttons_container">
+        
+		<button style="background-color: rgb(238, 126, 45); color:black;", class="buttons_config", onclick="fetch('/open-ict',{method:'POST'})">ICT</button>
+		<button style="background-color: rgb(182, 85, 17); color:black;", class="buttons_config", onclick="fetch('/open-revision',{method:'POST'})">Revision </button>
+        <button style="background-color: rgb(238, 126, 45); color:black;", class="buttons_config", onclick="fetch('/open-homework',{method:'POST'})">Homework</button> 
+        <button style="background-color: rgb(182, 85, 17);color: black;" class="buttons_config">nothing</button>
+        <button style="background-color: rgb(238, 126, 45);; color: black;" class="buttons_config">nothing</button>
+        <button style="background-color: rgb(182, 85, 17); color: black;" class="buttons_config">nothing</button>
+    </div>
+    <div class="buttons_container">
+        <button style="background-color:rgb(147, 0, 98);color:black", class="buttons_config", onclick="fetch('/close-all', {method:'POST'})">Close All</button>
+        <button style="background-color:rgba(255, 16, 175, 0.744);color:black", class="buttons_config", onclick="fetch('/reboot-network', {method:'POST'})">Network Reboot</button>
+        <button style="background-color:rgb(147, 0, 98);color:black", class="buttons_config", onclick="fetch('/machine-lock', {method:'POST'})">PC Lock </button>
+        <button style="background-color:rgba(255, 16, 175, 0.744);color:black", class="buttons_config", onclick="fetch('/machine-signout', {method:'POST'})">PC SignOut</button>
+        <button style="background-color:rgb(147, 0, 98);color:black", class="buttons_config", onclick="fetch('/machine-shutdown', {method:'POST'})">PC Shutdown</button>
+        <button style="background-color:rgba(255, 16, 175, 0.744);color:black", class="buttons_config", onclick="fetch('/machine-disconnect', {method:'POST'})">PC Disconnect</button>
+        
+    </div>
+    <div class="buttons_container">
+        <button style="color:black;background-color: rgb(0, 194, 0);", class="buttons_config" onclick="location.reload()">Force Update</button>
+        <button style="color:black;background-color: green;", class="buttons_config" onclick="document.documentElement.requestFullscreen()">Fullscreen</button>
+        <button style="color:black;background-color: rgb(0, 194, 0);", class="buttons_config" onclick="document.exitFullscreen()"> Exit Fullscreen</button>
+        <button style="color:black;background-color: green;", class="buttons_config" onclick="window.close()">Close Page</button>
+        <button style="color:black;background-color: rgb(0, 194, 0);" class="buttons_config" onclick="window.open(window.location.href,'_blank')">Duplicate</button>
+        <button style="color:black;background-color: green;" class="buttons_config">nothing</button>
+
+    </div> 
+
+    <div class="buttons_container2">
+        <button style="color: rgb(0, 140, 255);" class="button_config_big" onclick="window.location.href='/main'">Main Menu</button>
+
+        <button style="color: rgb(0, 140, 255);" class="button_config_big" onclick="window.location.href='/quick'">Quick Controls</button>
+
+        <button style="color: rgb(0, 140, 255);" class="button_config_big" onclick="window.location.href='/smarthome'">Smart Home</button>
+
+    </div>
+    <script>
+        function updateUptime(){
+            fetch('/get-uptime')
+                .then(response => response.json())
+                .then(data => {
+                    
+                        document.getElementById('uptime').textContent = 'Up: ' + data.up_time;
+                });
+        }
+       setInterval(updateUptime, 1000)
+       updateUptime()
+       
+    </script>
+</body>
+
+</html>

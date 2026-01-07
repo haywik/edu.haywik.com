@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+
+  
+ <title>GTA V</title>
+</head>
+
+<style>
+.box{
+ border: 7px solid red;
+ color: black;
+ line-height: 10px;
+ text-align: center;
+ height: 50px;
+ margin:auto;
+ padding:8px;
+ width:270px;
+
+
+
+  
+}
+
+
+  
+</style>
+
+
+
+
+
+
+  
+<body>
+<div class="box" >
+<h1>
+   GTA V
+</h1>
+</div>
+  
+  
+<h3>   Gta V is a game that is very popular in the worldwide.
+<p>   It is a game that you can play with friends you can also play online with other people.</p>
+<p>
+‎ 
+</p>
+   
+<p> <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.bbc.co.uk%2Fnews%2Fuk-scotland-scotland-business-63742004&psig=AOvVaw1fC4uCeY-wgxy-NyGgbAad&ust=1704801611914000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqFwoTCIC46tffzYMDFQAAAAAdAAAAABAD" alt="GTA V Cool pic"> </p>
+  
+
+
+  
+</h3>
+<p>
+‎ 
+</p>
+
+
+
+<a href="https://www.rockstargames.com/gta-v">GTA V Website</a>
+
+<p>
+‎ 
+</p>
+
+<p> The GTA V cost £45.99 on avegae over all devices and includes some addons for the game </p>
+
+
+
+</h3>
+</body>
+
+</html>

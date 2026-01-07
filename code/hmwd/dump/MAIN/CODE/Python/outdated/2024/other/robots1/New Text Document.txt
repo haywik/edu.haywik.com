@@ -1,0 +1,27 @@
+import motor
+import runloop
+from hub import *
+
+
+async def main():
+
+
+    motor.run_for_degrees(port.F,-360,720)
+
+    motor.run_for_degrees(port.E,360,720)
+
+
+
+    motor.run_for_degrees(port.B,10.20)
+
+    motor.run_for_degrees(port.B,-10,20)
+
+
+
+while True:
+    runloop.run(main())
+
+    
+
+
+
